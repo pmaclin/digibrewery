@@ -1,0 +1,37 @@
+<!-- Responsive panel example-->
+
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Style #<%= @style.id %></h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <dl class="dl-horizontal">
+              <dt>Name</dt>
+              <dd><%= @style.name %></dd>
+
+              <dt>Description</dt>
+              <dd><%= @style.description %></dd>
+
+              <dt>Image</dt>
+              <dd><%= @style.image %></dd>
+
+            </dl>
+            <div class="btn-group btn-group-justified">
+              <%= link_to icon('chevron-left'), styles_path, class: "btn btn-primary" %>
+
+              <%= link_to icon('edit'), edit_style_path(@style), class: "btn btn-warning" %>
+
+              <%= link_to icon('trash-o'), @style, method: :delete, data: { confirm: "Do you really want to delete this style?" }, class: "btn btn-danger" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End responsive panel example -->
