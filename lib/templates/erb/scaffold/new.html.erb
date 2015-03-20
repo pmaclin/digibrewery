@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">New <%= singular_table_name.titleize %></h3>
+      </div>
+      <div class="panel-body">
+        <%%= render 'form', <%= singular_table_name %>: @<%= singular_table_name %> %>
+      </div>
+    </div>
+  </div>
+</div>

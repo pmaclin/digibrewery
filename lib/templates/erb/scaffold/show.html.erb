@@ -1,0 +1,33 @@
+<!-- Responsive panel example-->
+
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= singular_table_name.titleize %> #<%%= @<%= singular_table_name %>.id %></h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <dl class="dl-horizontal">
+<% attributes.reject(&:password_digest?).each do |attribute| -%>
+              <dt><%= attribute.human_name %></dt>
+              <dd><%%= @<%= singular_table_name %>.<%= attribute.name %> %></dd>
+
+<% end -%>
+            </dl>
+            <div class="btn-group btn-group-justified">
+              <%%= link_to icon('chevron-left'), <%= index_helper %>_path, class: "btn btn-primary" %>
+
+              <%%= link_to icon('edit'), edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), class: "btn btn-warning" %>
+
+              <%%= link_to icon('trash-o'), @<%= singular_table_name %>, method: :delete, data: { confirm: "Do you really want to delete this <%= singular_table_name %>?" }, class: "btn btn-danger" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End responsive panel example -->
