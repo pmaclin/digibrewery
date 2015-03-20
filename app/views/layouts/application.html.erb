@@ -24,23 +24,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><%= link_to "Home", root_url %></li>
-        <li><%= link_to "Link 1", batches_path %></li>
-        <li><%= link_to "Link 2", recipes_path %></li>
-        <li><%= link_to "Link 3", reviews_path %></li>
-        <li><%= link_to "Link 4", uniques_path %></li>
-        <li><%= link_to "Link 5", users_path %></li>
-        <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li> -->
-        <!-- <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li> -->
+        <li><%= link_to "Batches", batches_path %></li>
+        <li><%= link_to "Recipes", recipes_path %></li>
+        <li><%= link_to "Reviews", reviews_path %></li>
+        <li><%= link_to "Uniques", uniques_path %></li>
+        <li><%#= link_to "Link 5", users_path %></li>
           </ul>
         </li>
       </ul>
@@ -51,7 +39,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form> -->
       <ul class="nav navbar-nav navbar-right">
-        <% if current_user.present? %>
+        <% if user_signed_in? %> <%# if current_user.present? %>
           <li><%= link_to current_user.username, edit_user_registration_path %></li>
           <li><%= link_to "Sign Out", destroy_user_session_path, :method => "delete" %></li>
         <% else  %>
@@ -59,17 +47,6 @@
           <li><%= link_to "Sign Up", new_user_registration_path %></li>
 
         <% end %>
-        <!-- li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li> -->
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -94,8 +71,8 @@
   </div>
  <% end %>
 
-<!-- <p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p> -->
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 
 
 <%= yield %>
