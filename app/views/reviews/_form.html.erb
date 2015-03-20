@@ -2,10 +2,10 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :rating %>
+    <%= f.input :rating, collection: 1..5 %>
     <%= f.input :content %>
-    <%= f.association :user_id %>
-    <%= f.association :batch_id %>
+    <%#= f.association :user_id %>
+    <%#= f.association :batch_id %>
   </div>
 
   <div class="form-actions">
