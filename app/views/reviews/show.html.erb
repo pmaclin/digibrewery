@@ -1,0 +1,40 @@
+<!-- Responsive panel example-->
+
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Review #<%= @review.id %></h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <dl class="dl-horizontal">
+              <dt>Rating</dt>
+              <dd><%= @review.rating %></dd>
+
+              <dt>Content</dt>
+              <dd><%= @review.content %></dd>
+
+              <dt>User</dt>
+              <dd><%= @review.user_id %></dd>
+
+              <dt>Batch</dt>
+              <dd><%= @review.batch_id %></dd>
+
+            </dl>
+            <div class="btn-group btn-group-justified">
+              <%= link_to icon('chevron-left'), reviews_path, class: "btn btn-primary" %>
+
+              <%= link_to icon('edit'), edit_review_path(@review), class: "btn btn-warning" %>
+
+              <%= link_to icon('trash-o'), @review, method: :delete, data: { confirm: "Do you really want to delete this review?" }, class: "btn btn-danger" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End responsive panel example -->

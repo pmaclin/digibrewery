@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rating: 1
+  content: MyText
+  user_id_id: 
+  batch_id_id: 
+
+two:
+  rating: 1
+  content: MyText
+  user_id_id: 
+  batch_id_id: 
