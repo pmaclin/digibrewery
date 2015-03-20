@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  flav_profile: MyText
+  recipe_type: MyString
+  brewery_name: MyString
+  description: MyText
+  label: MyString
+  user_id_id: 
+  style_id_id: 
+
+two:
+  name: MyString
+  flav_profile: MyText
+  recipe_type: MyString
+  brewery_name: MyString
+  description: MyText
+  label: MyString
+  user_id_id: 
+  style_id_id: 
