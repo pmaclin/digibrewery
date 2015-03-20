@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+
   devise_for :users
+
+  devise_scope :user do
+  root "devise/registrations#edit"
+  end
+
   resources :reviews
 
   resources :styles
@@ -10,9 +16,7 @@ Rails.application.routes.draw do
 
   resources :recipes
 
-  devise_scope :user do
-  root "devise/registrations#edit"
-  end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
