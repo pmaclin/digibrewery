@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150320054707) do
+ActiveRecord::Schema.define(version: 20150323221015) do
 
   create_table "batches", force: :cascade do |t|
     t.string   "brew_date"

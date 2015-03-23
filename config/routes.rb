@@ -12,8 +12,6 @@ Rails.application.routes.draw do
 
   resources :uniques
 
-  resources :batches
-
   resources :recipes
 
 
